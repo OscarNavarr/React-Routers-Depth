@@ -1,3 +1,11 @@
+/*
+*
+*code for open fake database
+*
+* #1: npm install -g json-server
+* #2: json-server -p 4000 -w ./data/db.json
+*
+*/
 import {
   createBrowserRouter,
   Route, 
