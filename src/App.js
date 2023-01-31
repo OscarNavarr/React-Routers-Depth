@@ -8,15 +8,16 @@ import {
 
 //pages
 import { About, Home } from "./pages";
+import Faq from "./pages/help/Faq";
+import Contact from "./pages/help/Contact";
+import { NotFound } from "./pages/NotFound";
+import { Careers, careersLoader } from "./pages/careers/Careers";
+import { CareerDetails, careerDetailsLoader } from "./pages/careers/CareerDetails";
 
 // layouts
 import { RootLayout } from "./layouts/RootLayout";
 import { HelpLayout } from "./layouts/HelpLayout";
-import Faq from "./pages/help/Faq";
-import Contact from "./pages/help/Contact";
-import { NotFound } from "./pages/NotFound";
 import { CareersLayout } from "./layouts/CareersLayout";
-import { Careers, careersLoader } from "./pages/careers/Careers";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,6 +35,11 @@ const router = createBrowserRouter(
           index 
           element={<Careers/>}
           loader={careersLoader}
+        />
+        <Route
+          path=":id"
+          element={<CareerDetails/>}
+          loader={careerDetailsLoader}
         />
       </Route>
       
